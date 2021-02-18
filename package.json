@@ -1,0 +1,52 @@
+{
+  "name": "electron-among-us",
+  "version": "0.3.5",
+  "description": "",
+  "homepage": "./",
+  "main": "main.js",
+  "scripts": {
+    "prod": "webpack --mode production --config webpack.build.config.js && electron --noDevServer .",
+    "start": "webpack-dev-server --hot --host 0.0.0.0 --config webpack.dev.config.js --mode development",
+    "build": "webpack --config webpack.build.config.js --mode production",
+    "package": "npm run build",
+    "postpackage": "electron-packager ./ \"Linkweb Softphone\" --out=./builds --icon=./src/assets/images/electron.icns",
+    "dmg": "electron-installer-dmg \"/Users/linkweb/PhpstormProjects/electron-webpack-phone/builds/Linkweb Softphone-darwin-x64/Linkweb Softphone.app\" \"softphone\" --out=\"/Users/linkweb/PhpstormProjects/electron-webpack-phone/builds/Linkweb Softphone-darwin-x64/\"",
+    "publish": "npm run clean && npm run build && npm run postpackage && npm run dmg",
+    "clean": "rm -rf ./dist ./builds",
+    "rebuild": "npm rebuild --runtime=electron --target=9.0.5 --disturl=https://atom.io/download/atom-shell --abi=83"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "electron-json-storage": "^4.3.0",
+    "electron-main-fetch": "^1.0.0",
+    "electron-overlay-window": "^1.0.4",
+    "electron-prompt": "^1.6.1",
+    "node-ssh": "^11.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icomoon": "^2.2.4",
+    "robotjs": "^0.6.0",
+    "socket.io-client": "^2.4.0",
+    "unzip": "^0.1.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "babili-webpack-plugin": "^0.1.2",
+    "css-loader": "^3.6.0",
+    "electron": "^9.4.1",
+    "electron-devtools-installer": "^3.1.0",
+    "electron-packager": "^15.2.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

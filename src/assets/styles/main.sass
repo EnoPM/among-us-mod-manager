@@ -1,0 +1,76 @@
+@font-face
+  font-family: Retro
+  src: url("../fonts/PressStart2P-Regular.ttf") format('truetype')
+  font-weight: normal
+  font-style: normal
+
+*
+  margin: 0
+  padding: 0
+  user-select: none
+body
+  font-family: Retro, sans-serif
+  color: white
+
+.loading-message
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 1.4rem
+.main-container
+  position: absolute
+  height: 100%
+  width: 100%
+  box-sizing: border-box
+.app-container
+  display: flex
+  width: 100%
+  height: 100%
+  .mods-list-container
+    width: 400px
+    height: 100%
+    background: rgba(255, 255, 255, 0.1)
+    $searchHeight: 50px
+    .mods-list
+      overflow-y: auto
+      height: calc(100% - #{$searchHeight})
+      width: 100%
+      .mods-item
+        height: 60px
+        width: 100%
+        border-bottom: solid 1px gray
+        display: flex
+        cursor: pointer
+        &:hover
+          background-color: rgba(255, 255, 255, 0.3)
+        img.mods-icon
+          height: 60px
+          width: 60px
+          margin-left: 10px
+        .mods-content
+          display: flex
+          flex-direction: column
+          justify-content: center
+          padding-left: 20px
+          .mods-name
+            font-size: 0.8rem
+          .mods-author
+            margin-top: 10px
+            font-size: 0.5rem
+    input.mods-list-search
+      width: 100%
+      height: $searchHeight
+      border: none
+      outline: none
+      background: rgba(0, 0, 0, 0.4)
+      color: gray
+      font-size: 1.3rem
+      padding: 0 5px
+      box-sizing: border-box
+      display: flex
+      align-items: center
+  .mods-screen-container
+    width: calc(100% - 400px)
+    height: 100%

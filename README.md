@@ -1,6 +1,9 @@
 # Among Us Mod Manager v1.0.0
 ## Gestionnaire de mod pour Among Us
 Ne vous prennez plus la tête pour copier votre dossier Among Us pour chaque mode que vous souhaitez tester : avec ce gestionnaire de mod vous pourrez conserver votre unique version d'Among Us et le programme se chargera du reste.
+
+#### [Télécharger Among Us Mod Manager v1.0.0 pour Windows](https://github.com/clicpanel/among-us-mod-manager/releases/download/v1.0.0/Among.Us.Mod.Manager.Installer.exe)
+
 ### Fonctionnalités
 - Téléchargement des mods depuis leur dernière version Github.
 - Utilisation des liens symboliques pour ne pas avoir à créer plusieurs instances du jeu.

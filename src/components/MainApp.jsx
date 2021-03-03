@@ -42,7 +42,12 @@ class MainApp extends React.Component {
 
     toggleSettings = () => {
         const settings = !this.state.settings;
-        this.setState({settings});
+        if((this.props.config.amongUsFolder === undefined || this.props.config.amongUsFolder === '') && settings === false) {
+            alert("Vous devez enregistrer votre exécutable Among Us avant de continuer");
+        } else {
+            this.setState({settings});
+        }
+
     };
 
     toggleDownload = () => {
@@ -51,10 +56,22 @@ class MainApp extends React.Component {
     };
 
     playVanilla = () => {
-        SystemController.playVanilla().then(() => {
+        if(this.props.config.amongUsFolder === undefined || this.props.config.amongUsFolder === '') {
+            alert("Vous devez enregistrer votre exécutable Among Us avant de continuer");
+        } else {
+            SystemController.playVanilla().then(() => {
 
-        });
+            });
+        }
     };
+
+    componentDidMount() {
+        if(this.props.config.amongUsFolder === undefined || this.props.config.amongUsFolder === '') {
+            this.setState({settings: true}, () => {
+                alert("Veuillez sélectionner votre exécutable Among Us dans les paramètres pour commencer");
+            });
+        }
+    }
 
     render() {
         const selection = this.getModById(this.state.selection);

@@ -94,7 +94,9 @@ class App extends Component {
 
     componentDidMount() {
         this.initApp().then(() => {
-            this.setState({loaded: true});
+            setTimeout(() => {
+                this.setState({loaded: true});
+            }, 500);
         });
     }
 

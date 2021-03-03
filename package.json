@@ -1,6 +1,6 @@
 {
   "name": "among-us-mod-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mod manager for Among Us",
   "homepage": "https://github.com/clicpanel/among-us-mod-manager",
   "main": "main.js",

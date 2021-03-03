@@ -1,4 +1,4 @@
-# Among Us Mod Manager v1.0.0
+# Among Us Mod Manager v1.0.1
 ## Gestionnaire de mod pour Among Us
 Ne vous prennez plus la tête pour copier votre dossier Among Us pour chaque mode que vous souhaitez tester : avec ce gestionnaire de mod vous pourrez conserver votre unique version d'Among Us et le programme se chargera du reste.
 

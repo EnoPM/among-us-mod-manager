@@ -12,6 +12,8 @@ Ne vous prennez plus la tête pour copier votre dossier Among Us pour chaque mod
 - Activez ou désactivez les mods sur votre jeu pour revenir à la version vanilla en un clique.
 - Switchez parmi les mods que vous avez installé simplement en cliquant sur le bouton "Jouer".
 - Très peu de configuration requise.
+  ![uninstalled](./screenshots/uninstalled.PNG)
+  ![installed](./screenshots/installed.PNG)
 ### Utilisation
 Lors de votre première utilisation, veillez à cliquer sur l'engrennage (tout en haut à droite), puis cliquez sur la petite icône de dossier pour séléctionner votre exécutable Among Us (Amons Us.exe). Enfin, cliquez sur Enregistrer.
 Et voilà vous êtes désormais prêt à utiliser le gestionnaire de mod !

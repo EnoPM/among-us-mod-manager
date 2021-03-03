@@ -44,7 +44,7 @@ function createWindow() {
     if (dev) {
         mainWindow.webContents.openDevTools();
     } else {
-        mainWindow.webContents.openDevTools();
+        //mainWindow.webContents.openDevTools();
     }
 
     mainWindow.on('page-title-updated', function (e) {
@@ -71,7 +71,7 @@ function createWindow() {
         if (dev) {
             mainWindow.webContents.openDevTools();
         } else {
-            mainWindow.webContents.openDevTools();
+            //mainWindow.webContents.openDevTools();
         }
     });
     mainWindow.on('closed', function () {

@@ -1,9 +1,18 @@
 import React from "react";
+import SettingsWindow from "./SettingsWindow.jsx";
+import SettingsIcon from "./Icons/SettingsIcon.jsx";
+import CloseIcon from "./Icons/CloseIcon.jsx";
+import ModDetailsContainer from "./ModDetailsContainer.jsx";
+import DownloadWindow from "./DownloadWindow.jsx";
+import {SystemController} from "../client/system";
 
 class MainApp extends React.Component {
 
     state = {
-        filter: ''
+        filter: '',
+        selection: null,
+        settings: false,
+        download: false
     };
 
     changeFilter = e => {
@@ -16,27 +25,65 @@ class MainApp extends React.Component {
         });
     };
 
+    getModById = id => {
+        for (const mod of this.props.mods) {
+            if (mod.id === id) {
+                return mod;
+            }
+        }
+        return null;
+    };
+
+    selectModFunc = id => {
+        return e => {
+            this.setState({selection: id});
+        };
+    };
+
+    toggleSettings = () => {
+        const settings = !this.state.settings;
+        this.setState({settings});
+    };
+
+    toggleDownload = () => {
+        const download = !this.state.download;
+        this.setState({download});
+    };
+
+    playVanilla = () => {
+        SystemController.playVanilla().then(() => {
+
+        });
+    };
+
     render() {
+        const selection = this.getModById(this.state.selection);
         return (
             <div className="app-container">
+                {this.state.settings ? <SettingsWindow config={this.props.config} updateConfig={this.props.updateConfig}/> : null}
+                {this.state.download ? <DownloadWindow updateInstalledMods={this.props.updateInstalledMods} mod={selection} toggleDownload={this.toggleDownload}/> : null}
+                <div onClick={this.playVanilla} className="vanilla-button">
+                    Jouer sans mod
+                </div>
+                <div className="settings-button" onClick={this.toggleSettings}>
+                    {this.state.settings ? <CloseIcon/> : <SettingsIcon/>}
+                </div>
                 <div className="mods-list-container">
-                    <input value={this.state.filter} onChange={this.changeFilter} placeholder="Search..." className="mods-list-search" type="text"/>
+                    <input value={this.state.filter} onChange={this.changeFilter} placeholder="Rechercher..."
+                           className="mods-list-search" type="text"/>
                     <div className="mods-list">
                         {this.getFilteredMods().map(mod => (
-                            <div key={mod.id} className="mods-item">
+                            <div onClick={this.selectModFunc(mod.id)} key={mod.id} className="mods-item" data-selected={this.state.selection === mod.id ? 'true' : 'false'}>
                                 <img alt="icon" className="mods-icon" src={mod.icon}/>
                                 <div className="mods-content">
                                     <div className="mods-name">{mod.name}</div>
-                                    <div className="mods-author">by {mod.author}</div>
+                                    <div className="mods-author">par {mod.author}</div>
                                 </div>
-
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="mods-screen-container">
-
-                </div>
+                <ModDetailsContainer installedMods={this.props.installedMods} toggleDownload={this.toggleDownload} mod={selection}/>
             </div>
         );
     }

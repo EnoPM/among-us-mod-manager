@@ -36,6 +36,182 @@ body {
   width: 100%;
   height: 100%;
 }
+.app-container .settings-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.app-container .settings-window .title {
+  font-size: 1.4rem;
+  margin: 20px;
+}
+.app-container .settings-window .content {
+  width: 100%;
+  padding: 50px 200px;
+  box-sizing: border-box;
+}
+.app-container .settings-window .content .config-item {
+  display: flex;
+  align-items: center;
+}
+.app-container .settings-window .content .config-item .label {
+  font-size: 0.8rem;
+  margin-right: 20px;
+}
+.app-container .settings-window .content .config-item .field {
+  display: flex;
+  align-items: center;
+}
+.app-container .settings-window .content .config-item .field input[type=text] {
+  height: 25px;
+  border: solid 1px grey;
+  outline: none;
+  background-color: #3c3636;
+  color: white;
+  margin-right: 5px;
+}
+.app-container .settings-window .content .config-item .field .file-input {
+  position: relative;
+  width: 27px;
+  height: 27px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #010145;
+}
+.app-container .settings-window .content .config-item .field .file-input input[type=file] {
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+.app-container .settings-window .content .config-item .field .file-input .placeholder {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  height: 25px;
+  width: 25px;
+  border: solid 1px #838383;
+}
+.app-container .settings-window .content .config-item .field .file-input .placeholder svg {
+  cursor: pointer;
+  position: absolute;
+}
+.app-container .settings-window .content .bottom-container {
+  display: flex;
+  justify-content: center;
+}
+.app-container .settings-window .content .bottom-container .btn.save {
+  margin-top: 100px;
+  padding: 25px;
+  cursor: pointer;
+  background-color: rgba(8, 177, 8, 0.8);
+  width: auto;
+}
+.app-container .settings-window .content .bottom-container .btn.save:hover {
+  filter: brightness(120%);
+}
+.app-container .download-window {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.app-container .download-window .title {
+  font-size: 1.4rem;
+  margin: 20px;
+}
+.app-container .download-window .confirm-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 200px;
+  box-sizing: border-box;
+}
+.app-container .download-window .confirm-box span {
+  color: #3b3be9;
+}
+.app-container .download-window .confirm-box .confirm-buttons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.app-container .download-window .confirm-box .confirm-buttons .btn {
+  padding: 25px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin: 0 20px;
+}
+.app-container .download-window .confirm-box .confirm-buttons .btn.yes {
+  background-color: rgba(8, 177, 8, 0.8);
+}
+.app-container .download-window .confirm-box .confirm-buttons .btn.no {
+  background-color: rgba(177, 8, 8, 0.8);
+}
+.app-container .download-window .confirm-box .confirm-buttons .btn:hover {
+  filter: brightness(120%);
+}
+.app-container .download-window .download {
+  width: 100%;
+  padding: 50px 200px;
+  box-sizing: border-box;
+}
+.app-container .download-window .download .info {
+  font-size: 0.8rem;
+  margin: 10px 0;
+}
+.app-container .download-window .download .progress-bar {
+  width: 100%;
+  height: 30px;
+  border: solid 1px #FFFFFF;
+  box-sizing: border-box;
+}
+.app-container .download-window .download .progress-bar .progression {
+  background-color: rgba(8, 177, 8, 0.8);
+  height: 100%;
+  width: 0;
+}
+.app-container .download-window .installation-ended {
+  width: 100%;
+  padding: 50px 200px;
+  box-sizing: border-box;
+}
+.app-container .vanilla-button {
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  height: 30px;
+  width: 200px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 0;
+  background-color: rgba(8, 109, 177, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-container .settings-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.app-container .settings-button svg {
+  fill: white;
+  height: 30px;
+  width: 30px;
+}
 .app-container .mods-list-container {
   width: 400px;
   height: 100%;
@@ -90,6 +266,54 @@ body {
 .app-container .mods-screen-container {
   width: calc(100% - 400px);
   height: 100%;
+}
+.app-container .mods-screen-container .header {
+  height: 80px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.app-container .mods-screen-container .header img.mods-icon {
+  height: 60px;
+  width: 60px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.app-container .mods-screen-container .body .description {
+  font-family: sans-serif;
+  line-height: 1.4rem;
+  font-size: 0.8rem;
+  overflow: auto;
+  height: calc(100vh - 200px);
+  margin: 20px 20px;
+}
+.app-container .mods-screen-container .body .description img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.app-container .mods-screen-container .body .head-buttons {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  width: 100%;
+}
+.app-container .mods-screen-container .body .head-buttons .btn {
+  padding: 25px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.app-container .mods-screen-container .body .head-buttons .btn:hover {
+  filter: brightness(120%);
+}
+.app-container .mods-screen-container .body .head-buttons .btn.install {
+  background-color: rgba(8, 177, 8, 0.8);
+}
+.app-container .mods-screen-container .body .head-buttons .btn.play {
+  background-color: rgba(8, 109, 177, 0.8);
 }
 
 /*# sourceMappingURL=main.css.map */

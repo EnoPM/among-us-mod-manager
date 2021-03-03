@@ -4,6 +4,8 @@ Ne vous prennez plus la tête pour copier votre dossier Among Us pour chaque mod
 
 #### [Télécharger Among Us Mod Manager v1.0.1 pour Windows](https://github.com/clicpanel/among-us-mod-manager/releases/download/v1.0.1/Among.Us.Mod.Manager.Installer.exe)
 
+> Ce programme utilise les liens symboliques pour activer/désactiver les mods sur Among Us. Sous Windows l'utilisation des liens symboliques nécéssite l'ouverture de l'application avec les droits administrateurs.
+
 ### Fonctionnalités
 - Téléchargement des mods depuis leur dernière version Github.
 - Utilisation des liens symboliques pour ne pas avoir à créer plusieurs instances du jeu.

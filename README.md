@@ -22,4 +22,4 @@ Et voilà vous êtes désormais prêt à utiliser le gestionnaire de mod !
 ### Un problème ?
 N'hésitez pas à ouvrir une issue : https://github.com/clicpanel/among-us-mod-manager/issues
 ### Vous souhaitez contribuer ?
-Vous pouvez toujours m'envoyer des suggestions sur discord (Oneclic#7536) ou proposer une pull request.
+Vous pouvez toujours m'envoyer des suggestions sur discord (eno#1001) ou proposer une pull request.

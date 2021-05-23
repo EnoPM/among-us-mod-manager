@@ -1,4 +1,4 @@
-# - Ce projet n'est plus maintenu est laisse place à un gestionnaire de mods plus générique : [Among Us - Mods](https://github.com/clicpanel/among-us-mods)
+# - Ce projet n'est plus maintenu et laisse place à un gestionnaire de mods plus générique : [Among Us - Mods](https://github.com/clicpanel/among-us-mods)
 ________________________________________________________________________
 # Among Us Mod Manager v1.0.1
 ## Gestionnaire de mod pour Among Us

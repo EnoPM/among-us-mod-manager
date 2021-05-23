@@ -1,5 +1,5 @@
-# Ce projet n'est plus maintenu est laisse place à un gestionnaire de mods plus générique : [Among Us - Mods](https://github.com/clicpanel/among-us-mods)
-#________________________________________________________________________
+# - Ce projet n'est plus maintenu est laisse place à un gestionnaire de mods plus générique : [Among Us - Mods](https://github.com/clicpanel/among-us-mods)
+________________________________________________________________________
 # Among Us Mod Manager v1.0.1
 ## Gestionnaire de mod pour Among Us
 Ne vous prennez plus la tête pour copier votre dossier Among Us pour chaque mode que vous souhaitez tester : avec ce gestionnaire de mod vous pourrez conserver votre unique version d'Among Us et le programme se chargera du reste.
